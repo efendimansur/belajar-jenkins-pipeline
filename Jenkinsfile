@@ -16,6 +16,7 @@ pipeline {
         stage ("Deploy"){
             steps {
                 echo ("Deploy")
+                sh (error)
             }
         }
 	}
@@ -23,6 +24,14 @@ pipeline {
     post {
         always {
             echo "I will always say Hello again!"
+        }
+
+        success {
+            echo "sukses"
+        }
+
+        failure {
+            echo "gagal"
         }
     }
 }
