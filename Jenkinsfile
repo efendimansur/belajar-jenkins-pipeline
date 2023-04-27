@@ -9,8 +9,7 @@ pipeline {
 
         stage ("Test") {
             steps {
-                echo ("Test")
-                sh (error)
+                echo ("Test")                
             }
         }
 
