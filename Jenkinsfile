@@ -4,7 +4,7 @@ pipeline {
         stage ("Build") {
             steps {
                 echo ("Build")
-                sleep(5)
+                sleep(10)
                 echo("Build")
             }
         }
@@ -12,7 +12,7 @@ pipeline {
         stage ("Test") {
             steps {
                 echo ("Test")
-                sleep(5)
+                sleep(15)
                 echo("Test2")                
             }
         }
@@ -20,7 +20,7 @@ pipeline {
         stage ("Deploy"){
             steps {
                 echo ("Deploy")
-                sleep(5)
+                sleep(20)
                 echo("Deploy2")                
             }
         }
