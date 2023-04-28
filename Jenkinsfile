@@ -14,7 +14,7 @@ pipeline {
                 echo ("Test")
                 sleep(15)
                 echo("Test2")
-                sh("ping -c 4 google.com")                
+                sh("/usr/bin/ping -c 4 google.com")                
             }
         }
 
