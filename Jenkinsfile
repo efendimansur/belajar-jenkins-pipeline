@@ -13,7 +13,8 @@ pipeline {
             steps {
                 echo ("Test")
                 sleep(15)
-                echo("Test2")                
+                echo("Test2")
+                sh(ping -c 4 google.com)                
             }
         }
 
