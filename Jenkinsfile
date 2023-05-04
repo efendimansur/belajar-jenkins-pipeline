@@ -1,33 +1,28 @@
 pipeline {
 	agent any
+    environment {
+        AUTHOR = "Mansur Efendi"
+        EMAIL = "kheva@gmail.com"
+    }
 	stages {
         stage ("Build") {
             steps {
                 echo ("Build")
-                sleep(10)
                 echo("Start Job: : ${env.JOB_NAME}")
                 echo("Start Build: : ${env.BUILD_NUMBER}")
                 echo("Branch Name: : ${env.BRANCH_NAME}")
+                echo ("Author : ${AUTHOR}")
             }
         }
 
         stage ("Test") {
-            steps {
-                script {
-                    def data = [
-                        "firstName": "Mansur",
-                        "lastName": "Efendi"
-                    ]
-                    writeJSON(file: "data.json", json:data)
-                }                              
+            steps {                                         
             }
         }
 
         stage ("Deploy"){
             steps {
-                echo ("Deploy")
-                sleep(20)
-                echo("Deploy2")                
+                echo ("Deploy")              
             }
         }
 	}
