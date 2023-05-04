@@ -15,11 +15,6 @@ pipeline {
             }
         }
 
-        stage ("Test") {
-            steps {                                         
-            }
-        }
-
         stage ("Deploy"){
             steps {
                 echo ("Deploy")              
