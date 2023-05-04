@@ -11,10 +11,13 @@ pipeline {
 
         stage ("Test") {
             steps {
-                echo ("Test")
-                sleep(15)
-                echo("Test2")
-                sh("pwd")               
+                script {
+                    def data = [
+                        "firstName": "Mansur",
+                        "lastName": "Efendi"
+                    ]
+                    writeJSON(file: "data.json", json:data)
+                }                              
             }
         }
 
