@@ -4,6 +4,7 @@ pipeline {
         AUTHOR = "Mansur Efendi"
         EMAIL = "kheva@gmail.com"
     }
+
     options {
         disableConcurrentBuilds()
         timeout(time:10, unit: 'SECONDS')
@@ -16,12 +17,14 @@ pipeline {
                 echo("Start Build: : ${env.BUILD_NUMBER}")
                 echo("Branch Name: : ${env.BRANCH_NAME}")
                 echo ("Author : ${AUTHOR}")
+                sleep(20)
             }
         }
 
         stage ("Deploy"){
             steps {
-                echo ("Deploy")              
+                echo ("Deploy")  
+                sleep(20)            
             }
         }
 	}
