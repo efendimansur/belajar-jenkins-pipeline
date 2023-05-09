@@ -20,7 +20,7 @@ pipeline {
 	stages {
         stage ("Build") {
             steps {
-                echo "Nama : ${params.name}"
+                echo "Nama : $params.name"
             }
         }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 
