@@ -6,7 +6,7 @@ pipeline {
     }
 
     parameters {
-        string(name: "Name", defaultValue: 'Guest', description: 'What is your name?')
+        string(name: 'Name', defaultValue: 'Guest', description: 'What is your name?')
         text(name: "Description", defaultValue: "Guest", description: "Tell about you")
         booleanParam(name: "Deploy", defaultValue: false, description: "Need to deploy?")
         choice(name: "SOCIAL_MEDIA", choices: ['Instagram', 'Facebook', 'Twitter'], description: "Which social media?")
