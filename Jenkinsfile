@@ -20,14 +20,9 @@ pipeline {
 	stages {
         stage ("Build") {
             steps {
-                echo "Hello ${params.name}"
-                echo "${params.text}"
-                echo("Start Build: : ${env.BUILD_NUMBER}")
-                echo("Branch Name: : ${env.BRANCH_NAME}")
-                echo ("Author : ${AUTHOR}")
-                sleep(20)
+                echo "Nama : ${params.name}"
             }
-        }
+        }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 
         stage ("Deploy"){
             steps {
