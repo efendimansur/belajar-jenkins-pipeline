@@ -21,7 +21,7 @@ pipeline {
         stage ("Build") {
             steps {
                 echo "Hello ${params.name}"
-                echo("Start Job: : ${env.JOB_NAME}")
+                echo ${params.text}
                 echo("Start Build: : ${env.BUILD_NUMBER}")
                 echo("Branch Name: : ${env.BRANCH_NAME}")
                 echo ("Author : ${AUTHOR}")
